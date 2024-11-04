@@ -1,6 +1,6 @@
 # M/o/Vfuscator HTTP Server
 
-A simple HTTP server that uses only the mov instruction, compiled with the M/o/Vfuscator. The server runs on port 8080 and returns "Hello, world".
+A simple HTTP server that uses only the mov instruction, compiled with the M/o/Vfuscator. The server runs on port 8080 and returns "Hello, world". The original server was modified into a movcc compatible version with the help of o1.
 
 ## Setup
 
@@ -24,7 +24,7 @@ cd movfuscator
 4. Compile the server:
 ```bash
 cd ..
-movfuscator/build/movcc -o server server.c
+movfuscator/build/movcc -o server_mov_compatible server_mov_compatible.c
 ```
 
 5. Run the server:
@@ -39,6 +39,12 @@ curl http://localhost:8080/
 ```
 
 You should see: `<html>hello, world</html>`
+
+You can view the instructions using `objdump`:
+
+```bash
+objdump -d -Mintel server_mov_compatible
+```
 
 ## Technical Details
 ### Implementations and Key Decisions Differing from the Original Code
@@ -114,3 +120,11 @@ After starting the server, you can open a web browser and navigate to http://loc
 ### Stopping the Server
 
 Since the server runs in an infinite loop, you can stop it by pressing Ctrl + C in the terminal where it's running.
+
+## Credit
+
+Huge credit to both Bruins Slot for his tutorial on implementing an http server from scratch and Christopher Domas who created the original movfuscator.
+
+- [Making a simple HTTP webserver in C](https://bruinsslot.jp/post/simple-http-webserver-in-c/)
+- [Break Me00 The MoVfuscator Turning mov into a soul crushing RE nightmare Christopher Domas](https://www.youtube.com/watch?v=R)
+- [movfuscator - The single instruction C compiler](https://github.com/xoreaxeaxeax/movfuscator/)

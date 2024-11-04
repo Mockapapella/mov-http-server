@@ -1,3 +1,5 @@
+// A movcc compatible implementation of a basic http server
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <unistd.h>
