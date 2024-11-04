@@ -1,2 +1,3 @@
 ./movfuscator/
-server
+server_mov_compatible
+server_simple
