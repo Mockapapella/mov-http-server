@@ -4,6 +4,11 @@ A simple HTTP server that uses only the mov instruction, compiled with the M/o/V
 
 ## Setup
 
+1. Clone movfuscator
+```bash
+git clone https://github.com/xoreaxeaxeax/movfuscator.git
+```
+
 1. Install dependencies:
 ```bash
 sudo apt update
