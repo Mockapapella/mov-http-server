@@ -9,31 +9,31 @@ A simple HTTP server that uses only the mov instruction, compiled with the M/o/V
 git clone https://github.com/xoreaxeaxeax/movfuscator.git
 ```
 
-1. Install dependencies:
+2. Install dependencies:
 ```bash
 sudo apt update
 sudo apt install build-essential git bison flex libgmp3-dev libmpfr-dev libmpc-dev texinfo
 ```
 
-2. Build the compiler:
+3. Build the compiler:
 ```bash
 cd movfuscator
 ./build.sh
 ```
 
-3. Compile the server:
+4. Compile the server:
 ```bash
 cd ..
 movfuscator/build/movcc -o server server.c
 ```
 
-4. Run the server:
+5. Run the server:
 ```bash
 chmod +x server
 ./server
 ```
 
-5. Test it:
+6. Test it:
 ```bash
 curl http://localhost:8080/
 ```
